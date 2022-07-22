@@ -1,7 +1,3 @@
----
-title: 'Device Transaction Relayer'
----
-
 Device Transaction Relayer
 ===
 
