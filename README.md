@@ -8,7 +8,8 @@ The program is designed to run directly on the device, it assumes the logging pr
 1. Queries the LoggerNFT contract for the last datapoint and extracts the timestamp
 2. Imports the local `data.json` and returns an array of the latest datapoints
 3. Maps over the latest data points and for each datapoint: 4. calls the `LoggerNFT`'s `logData()` function
-   <br>
+
+<br>
 
 ## Project Setup
 
@@ -19,14 +20,15 @@ We use codespaces to ensure the environment is easy to set up and deterministic
 3. Click "Create codespace on main"
 4. Wait for the machine to setup
 5. In the terminal run `brownie run scripts/deploy.py --silent`
-   <br>
+
+<br>
 
 ## `./run.py`
 
-:::info
-implimentation of the functions is stored in the `./helpers.py` file to keep the code clean and focus on whats happening rather than how
-:::
+> implimentation of the functions is stored in the `./helpers.py` file to keep the code clean and focus on whats happening rather than how
+
 The code for the main file is very simple. When the program runs, it calls three functions, inputting the data returned from the previous step
+
 <br>
 
 ```python=
@@ -73,7 +75,6 @@ main():
 
 1. This function calls the `logData(temp, location timestamp)` on the `LoggerNFT` contract
 
----
 
 <br>
 
