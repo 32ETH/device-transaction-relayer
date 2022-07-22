@@ -2,17 +2,16 @@
 import os
 from brownie import LoggerNFT, accounts
 from ..scripts import helpers
-from dotenv import load_dotenv
-
-load_dotenv()
+import json
 
 device_account = accounts[0]
 device_id = 1
 
 
 def main():
-    logger = os.getenv("PRIVATE_KEY")
-    print(logger)
-    # last_timestamp = helpers.last_timestamp(device_id)
+    logger = helpers.get_device_wallet()
+    print(f"Device Address: {logger.address}")
+    last_timestamp = helpers.last_timestamp(device_id)
+    print(f"last_timestamp: {last_timestamp}")
     # fresh_data = helpers.load_database(last_timestamp)
     # helpers.record_to_blockchain(fresh_data)
