@@ -50,7 +50,8 @@
 		"python3 -m venv venv",
 		"source venv/bin/activate",
 		"pip3 install -r requirements.txt // Install project dependencies",
-		"brownie pm install OpenZeppelin/openzeppelin-contracts@4.7.1"
+		"brownie pm install OpenZeppelin/openzeppelin-contracts@4.7.1",
+		"brownie run scripts/deploy.py"
 	],
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
