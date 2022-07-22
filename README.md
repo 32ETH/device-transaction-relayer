@@ -74,7 +74,6 @@ main():
 
 1. This function calls the `logData(temp, location timestamp)` on the `LoggerNFT` contract
 
----
 
 <br>
 
