@@ -1,6 +1,7 @@
 # Device Transaction Relayer
 
 [![Codespaces Prebuilds](https://github.com/32ETH/device-transaction-relayer/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg)](https://github.com/32ETH/device-transaction-relayer/actions/workflows/codespaces/create_codespaces_prebuilds)
+<br>
 
 The program is designed to run directly on the device, it assumes the logging program is storing logging data to a local database (a local `data.json` file). The `Device Transaction Relayer` runs on a cron job every minute and does the following:
 
