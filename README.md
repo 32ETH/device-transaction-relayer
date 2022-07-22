@@ -2,9 +2,13 @@ Device Transaction Relayer
 ===
 
 
-## Table of Contents
+The program is designed to run directly on the device, it assumes the logging program is storing logging data to a local database (a local `data.json` file). The `Device Transaction Relayer` runs on a cron job every minute and does the following:
 
-[TOC]
+1. Queries the LoggerNFT contract for the last datapoint and extracts the timestamp
+2. Imports the local `data.json` and returns an array of the latest datapoints
+3. Maps over the latest data points and for each datapoint:
+    4. calls the `LoggerNFT`'s `logData()` function 
+<br>
 
 ## Project Setup
 
@@ -15,16 +19,6 @@ We use codespaces to ensure the environment is easy to set up and deterministic
 3. Click "Create codespace on main"
 4. Wait for the machine to setup
 5. In the terminal run `brownie run scripts/deploy.py --silent`
-
-Outline
----
-
-The program is designed to run directly on the device, it assumes the logging program is storing logging data to a local database (a local `data.json` file). The `Device Transaction Relayer` runs on a cron job every minute and does the following:
-
-1. Queries the LoggerNFT contract for the last datapoint and extracts the timestamp
-2. Imports the local `data.json` and returns an array of the latest datapoints
-3. Maps over the latest data points and for each datapoint:
-    4. calls the `LoggerNFT`'s `logData()` function 
 <br>
 
 `./run.py`
