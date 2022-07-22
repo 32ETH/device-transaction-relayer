@@ -1,6 +1,7 @@
 __pycache__
 .env
 .history
+venv/
 .hypothesis/
 build/
 reports/

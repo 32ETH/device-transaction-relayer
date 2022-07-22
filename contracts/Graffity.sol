@@ -15,13 +15,13 @@ contract Graffity {
     // @notice Store the new message with the writers address
     event MessageChanged(string message, address sender);
 
-    constructor(string _message) public {
+    constructor(string memory _message) public {
         message = _message;
     }
 
     // @notice Store the new message with the writers address
-    function setMessage(string _message) public {
+    function setMessage(string memory _message) public {
         message = _message;
-        emit MessageChanged(message);
+        emit MessageChanged(message, msg.sender);
     }
 }
